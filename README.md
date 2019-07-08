@@ -16,7 +16,6 @@ To install Akamai Edge Authorization Token with dep:
 ```Shell
 $ dep ensure -add github.com/mobilerider/EdgeAuth-Token-Golang
 ```
-  
 
 ## Examples
 #### ACL (Access Control List) parameter option
@@ -24,7 +23,7 @@ $ dep ensure -add github.com/mobilerider/EdgeAuth-Token-Golang
 ```Golang
 package main
 
-import "github.com/mobilerider/EdgeAuth-Token-Golang/edgeauth
+import "github.com/mobilerider/EdgeAuth-Token-Golang/edgeauth"
 
 func main {
     acl := "/s/c/m/f/5/9/2/f5929e909d4/*"
@@ -97,14 +96,12 @@ type Config struct {
 
 ```Golang
 client.GenerateToken(value, isUrl) {}
-
-// both return the authorization token string.
 ```
 
 | Parameter | Description |
 |-----------|-------------|
-| url | Single URL path (String) |
-| acl | Access Control List can use the wildcard(\*, ?). It can be String (single path) or Array (multi paths) |
+| value | Single URL path or Access Control List (String) |
+| isUrl | Wether passed value is a url or not (Boolean) |
 
 
 ## Others
@@ -115,7 +112,7 @@ If you use the **Segmented Media Protection** behavior in AMD(Adaptive Media Del
 
 ### TODOs
 
-1- Implement EscapeEarly option
-2- Implement Verbose option
+1. Implement EscapeEarly option
+2. Implement Verbose option
 
 ### Important!!: This is NOT an official library from Akamai Technologies.
