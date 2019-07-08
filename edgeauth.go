@@ -104,7 +104,7 @@ func (c *Client) GenerateToken(path string, isUrl bool) (string, error) {
 		query = append(query, c.Config.IP)
 	}
 
-	// Include StartTime only if explcity given
+	// Include StartTime only if explicitly given
 	if !c.Config.StartTime.IsZero() {
 		query = append(query, "st="+strconv.FormatInt(c.Config.StartTime.Unix(), 10))
 	}
