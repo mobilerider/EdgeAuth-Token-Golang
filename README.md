@@ -44,7 +44,7 @@ func main {
     }
 
     // Use generated token
-    
+
     // token would be in the form of:
     // exp=1562609231~acl=/s/c/m/f/5/9/2/f5929e909d4/*~hmac=7a6bd5d5abdad74bda765b4da67b7ad54b6a4d6ba54d67b4ad76b4
 
@@ -116,5 +116,7 @@ If you use the **Segmented Media Protection** behavior in AMD(Adaptive Media Del
 
 1. Implement EscapeEarly option
 2. Implement Verbose option
+
+### Inspired in [https://github.com/akamai/EdgeAuth-Token-Node](https://github.com/akamai/EdgeAuth-Token-Node)
 
 ### Important!!: This is NOT an official library from Akamai Technologies.
