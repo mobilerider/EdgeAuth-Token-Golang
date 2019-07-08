@@ -42,8 +42,10 @@ func main {
     if err != nil {
 		// Handle error
     }
+
+    // Use generated token
     
-    // Generated token value would in the form of:
+    // token would be in the form of:
     // exp=1562609231~acl=/s/c/m/f/5/9/2/f5929e909d4/*~hmac=7a6bd5d5abdad74bda765b4da67b7ad54b6a4d6ba54d67b4ad76b4
 
     // You will probably use that token as a value of a cookie 
@@ -80,7 +82,7 @@ type Config struct {
 
 | Parameter | Description |
 |-----------|-------------|
-| options.key | Secret required to generate the token. It must be hexadecimal digit string with even-length. |
+| Key | Secret required to generate the token. It must be hexadecimal digit string with even-length. |
 | Algo  | Algorithm to use to generate the token. ('sha1', 'sha256', or 'md5') [ Default: 'sha256' ] |
 | Salt | Additional data validated by the token but NOT included in the token body. (It will be deprecated) |
 | StartTime | What is the start time? (Use string 'now' for the current time) |
