@@ -30,13 +30,13 @@ func main {
     acl := "/s/c/m/f/5/9/2/f5929e909d4/*"
     key := "52a152a152a152a152a152a152a1"
 
-    config := &Config{
+    config := &edgeauth.Config{
 		Algo:           crypto.SHA256,
 		Key:            sampleKey,
 		DurationWindow: 300 * time.Second,
 	}
 
-	client := NewClient(config)
+	client := edgeauth.NewClient(config)
 
     token, err := client.GenerateToken(acl, false)
     
@@ -118,4 +118,4 @@ If you use the **Segmented Media Protection** behavior in AMD(Adaptive Media Del
 1- Implement EscapeEarly option
 2- Implement Verbose option
 
-### Important!!: This is not an official library from Akamai Technologies.
+### Important!!: This is NOT an official library from Akamai Technologies.
