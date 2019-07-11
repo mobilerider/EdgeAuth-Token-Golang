@@ -53,7 +53,7 @@ func TestGenerateToken(t *testing.T) {
 		t.Error("second field must in the form `acl=<path>`")
 	}
 
-	matched, _ = regexp.MatchString(`hmac=\w{64}`, fields[3])
+	matched, _ = regexp.MatchString(`hmac=[a-f][0-9]{64}`, fields[3])
 
 	if !matched {
 		t.Error("third field must in the form `hmac=<hash>`")
